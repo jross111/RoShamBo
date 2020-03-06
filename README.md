@@ -1,2 +1,3 @@
 # RoShamBo
-Rock Paper Scissors with vanilla js
+
+Provably fair Rock Paper Scissor game built with vanilla js.
