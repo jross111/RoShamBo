@@ -18,6 +18,7 @@ function play(e) {
     console.log(playerChoice, computerChoice);
     const winner = getWinner(playerChoice, computerChoice);
     console.log(winner);
+    showWinner(winner, computerChoice, playerChoice);
 }
 
 //Comp Choice
@@ -52,7 +53,7 @@ function getWinner(player, computer) {
     }
 }
 
-function showWinner(winner, computerChoice) {
+function showWinner(winner, computerChoice, playerChoice) {
     if (winner === 'player') {
         scoreboard.player++;
         result.innerHTML = `
@@ -63,21 +64,22 @@ function showWinner(winner, computerChoice) {
     } else if (winner === 'computer') {
         scoreboard.player++;
         result.innerHTML = `
-            <h1 class="text-lose"> You Lost!</h1>
-            <i class="fas fa-hand-${computerChoice} fa-10x"></i>
-            <p>Computer Chose <strong>${computerChoice}</strong>
-            `;
+            <p> Your <strong>${playerChoice}</strong> lost to ${computerChoice}.</p>
+
+            <i class="text-lose fas fa-hand-${computerChoice} fa-10x"></i>
+
+        `;
     } else {
         result.innerHTML = `
-        <h1> Draw!</h1>
-        <i class="fas fa-hand-${computerChoice} fa-10x"></i>
-        <p>Computer Chose <strong>${computerChoice}</strong>
-        `;
+            <h1> Draw!</h1>
+                <i class="fas fa-hand-${computerChoice} fa-10x"></i>
+                <p>You both chose <strong>${computerChoice}.</strong>
+                    `;
     }
     score.innerHTML = `
         <p>Player: ${scoreboard.player} </p>
-        <p>Computer: ${scoreboard.computer} </p>
-    `;
+                    <p>Computer: ${scoreboard.computer} </p>
+                    `;
 
     modal.style.display = 'block';
 }
