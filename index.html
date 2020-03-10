@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/modal.css" />
-		<script
-			src="https://kit.fontawesome.com/dfbba71e17.js"
-			crossorigin="anonymous"
-		></script>
-		<title>RoShamBo</title>
-	</head>
-	<body>
-		<div class="container">
-			<header class="header">
-				<h1>RoShamBo</h1>
-				<button id="restart" class="restart-btn">Start Over</button>
-				<div id="score" class="score">
-					<p>Player: 0</p>
-					<p>Computer: 0</p>
-				</div>
-			</header>
-			<h2>Pick</h2>
-			<i id="rock" class="choice fas fa-hand-rock fa-8x"></i>
-			<i id="paper" class="choice fas fa-hand-paper fa-8x"></i>
-			<i id="scissors" class="choice fas fa-hand-scissors fa-8x"></i>
-		</div>
-		<!-- modal -->
-		<div class="modal">
-			<div id="result" class="modal-content">
-				<h1 class="text-win">Winner!</h1>
-				<fa class="fas fa-hand-rock fa-10x"></fa>
-				<p>You lost to Rock</p>
-			</div>
-		</div>
 
-		<script src="js/main.js"></script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/modal.css" />
+	<script src="https://kit.fontawesome.com/dfbba71e17.js" crossorigin="anonymous"></script>
+	<title>RoShamBo</title>
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<h1>RoShamBo</h1>
+			<button id="restart" class="restart-btn">Start Over</button>
+			<div id="score" class="score">
+				<p>Player: 0</p>
+				<p>Computer: 0</p>
+			</div>
+		</header>
+		<h2>Pick</h2>
+		<i id="rock" class="choice fas fa-hand-rock fa-8x"></i>
+		<i id="paper" class="choice fas fa-hand-paper fa-8x"></i>
+		<i id="scissors" class="choice fas fa-hand-scissors fa-8x"></i>
+	</div>
+	<!-- modal -->
+	<div class="modal">
+		<div id="result" class="modal-content">
+			<h1 class="text-win">Winner!</h1>
+			<fa class="fas fa-hand-rock fa-10x"></fa>
+			<p>You lost to Rock</p>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+
 </html>

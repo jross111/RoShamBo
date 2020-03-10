@@ -11,7 +11,7 @@ const scoreboard = {
 
 //Play game
 function play(e) {
-    restart.style.display = 'inline-block';
+    restart.style.display = 'block';
     const playerChoice = e.target.id;
     const computerChoice = getComputerChoice();
 
@@ -62,7 +62,7 @@ function showWinner(winner, computerChoice, playerChoice) {
             <p>Computer Chose <strong>${computerChoice}</strong>
             `;
     } else if (winner === 'computer') {
-        scoreboard.player++;
+        scoreboard.computer++;
         result.innerHTML = `
             <p> Your <strong>${playerChoice}</strong> lost to ${computerChoice}.</p>
 
@@ -84,6 +84,23 @@ function showWinner(winner, computerChoice, playerChoice) {
     modal.style.display = 'block';
 }
 
+// Start Over
+
+function startOver() {
+    window.location.reload();
+}
+
+// Clear Modal
+
+function clearModal(e) {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
 //Event Listeners
 
-choices.forEach(choice => choice.addEventListener('click', play)) 
+choices.forEach(choice => choice.addEventListener('click', play));
+window.addEventListener('click', clearModal);
+// modal.addEventListener('click', clearModal);
+restart.addEventListener('click', startOver);
